@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+
+    <!-- meta define the character to be UTF-8, makes the website look good on all devices -->
+
+    <title>insaption</title>
+    <!-- <link rel="stylesheet" href="insaption.css"> -->
+
+    <style>
+
+    html{
+        scroll-behavior: smooth;
+        max-width:100%;
+        overflow-x:hidden;
+        /* prevent horizontal scroll */
+    }
+
+    h3{
+        font-family: "futura";
+        color:black;
+    }
+
+    p{
+        font-family: "futura";
+        color:#3D3D3D;
+    }
+
+    a{
+         text-decoration: none;
+         color:gray;
+     }
+
+    .main{
+        display: flex;
+        color: #3D3D3D;
+        font-size: 70%;
+    }
+
+    .comments{
+        position: fixed;
+        left: 12px;
+        bottom: 150px;
+        height: 15%;
+        width: 18%;
+        
+    }
+
+    .leftnavi{
+        display:block;
+        position: fixed;
+        /* border: 1px solid black; */
+        left:12vw;
+        top: 85px;
+        width: 25vw;
+     }
+
+     .leftnavi li{
+        list-style: none;
+        font-family: "Apple SD Gothic Neo";
+        font-weight: lighter;
+        color:gray;
+     }
+
+     /* @media screen and (max-width:450px){ 미디어 쿼리 어케함 ㅠㅠ
+         .leftnavi{font-size: smaller;}
+     } */
+
+     .leftnavi li:hover{
+         color:black;
+         font-weight: bold;
+     }
+
+    .boxes{
+        display: flex;
+        flex-shrink: 0;
+        position: absolute;
+        right:0;
+        top:0;
+    }
+
+    .boxes div{
+        width: 25vw;
+        height: 25vw;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1px;
+        background-color: white;
+    }
+
+    .boxes div:hover{
+        background-size: cover;
+        background-position: center;
+        /* transition: .5s ease; */
+    }
+
+    .boxes1{
+        margin-right:15px;
+    }
+
+    .boxes2{
+        margin-left: 15px;
+        margin-right: 15px;
+        
+    }
+    .boxes3{
+        margin-left: 15px;
+    }
+
+    /* .bg1-0,.bg2-0,.bg3-0{
+        margin-bottom: 30px;
+    } */
+
+    
+
+
+    /* .boxes1 div,.boxes2 div, .boxes3 div{
+        margin-bottom: 30px; 오?????? 이게 더 메잌센스인듯 (열포멧이니까)
+    } */
+
+        /* .mar1-0:hover{
+        background-image: url("src/test3 copy.jpg"); 
+    } */
+
+
+    .bg1-0{background-image: url("src/bg/p1.jpg");}
+    .bg1-1{background-image: url("src/bg/p2.jpg");}
+    .bg2-0{background-image: url("src/bg/a1.jpg");}
+    .bg2-1{background-image: url("src/bg/a2.jpg");}
+    .bg3-0{background-image: url("src/bg/b1.jpg");}
+    .bg3-1{background-image: url("src/bg/b2.jpg");}
+
+    .bg1-0:hover{background-image: url("src/bg/place.jpg");}
+    .bg2-0:hover{background-image: url("src/bg/people.jpg");}
+    .bg3-0:hover{background-image: url("src/bg/process.jpg");}
+
+    /* MAR */
+
+    .mar1-0{background-image: url("src/01mar/p1.jpg");}
+    .mar1-1{background-image: url("src/01mar/p2.jpg");}
+    .mar1-2{background-image: url("src/01mar/p3.jpg");}
+    .mar1-3{background-image: url("src/01mar/p4.jpg");}
+    .mar1-4{background-image: url("src/01mar/p5.jpg");}
+    .mar1-5{background-image: url("src/01mar/p6.jpg");}
+    .mar1-6{background-image: url("src/01mar/p7.jpg");}
+    .mar1-7{background-image: url("src/01mar/p8.jpg");}
+    .mar1-8{background-image: url("src/01mar/p9.jpg");}
+    .mar1-9{background-image: url("src/01mar/p10.jpg");}
+
+    .mar2-0{background-image: url("src/01mar/a1.jpg");}
+    .mar2-1{background-image: url("src/01mar/a2.jpg");}
+    .mar2-2{background-image: url("src/01mar/a3.jpg");}
+    .mar2-3{background-image: url("src/01mar/a4.jpg");}
+    .mar2-4{background-image: url("src/01mar/a5.jpg");}
+    .mar2-5{background-image: url("src/01mar/a6.jpg");}
+    .mar2-6{background-image: url("src/01mar/a7.jpg");}
+    .mar2-7{background-image: url("src/01mar/a8.jpg");}
+    .mar2-8{background-image: url("src/01mar/a9.jpg");}
+    .mar2-9{background-image: url("src/01mar/a10.jpg");}
+
+    .mar3-0{background-image: url("src/01mar/b1.jpg");}
+    .mar3-1{background-image: url("src/01mar/b2.jpg");}
+    .mar3-2{background-image: url("src/01mar/b3.jpg");}
+    .mar3-3{background-image: url("src/01mar/b4.jpg");}
+    .mar3-4{background-image: url("src/01mar/b5.jpg");}
+    .mar3-5{background-image: url("src/01mar/b6.jpg");}
+    .mar3-6{background-image: url("src/01mar/b7.jpg");}
+    .mar3-7{background-image: url("src/01mar/b8.jpg");}
+    .mar3-8{background-image: url("src/01mar/b9.jpg");}
+    .mar3-9{background-image: url("src/01mar/b10.jpg");}
+
+/* HOVER */
+    .mar2-0:hover{background-image: url("src/postit/mar1.jpg");}
+    .mar2-3:hover{background-image: url("src/postit/mar2.jpg");}
+    .mar2-6:hover{background-image: url("src/postit/mar3.jpg");}
+    .mar3-6:hover{background-image: url("src/postit/mar4.jpg");}
+    .mar1-0:hover{background-image: url("src/postit/9.jpg");}
+    .mar3-0:hover{background-image: url("src/postit/10.jpg");}
+    .mar2-2:hover{background-image: url("src/postit/1.jpg");}
+    .mar3-2:hover{background-image: url("src/postit/7.jpg");}
+    .mar2-4:hover{background-image: url("src/postit/8.jpg");}
+    .mar1-2:hover{background-image: url("src/postit/6.jpg");}
+    .mar1-3:hover{background-image: url("src/postit/2.jpg");}
+    .mar3-7:hover{background-image: url("src/postit/3.jpg");}
+    .mar2-9:hover{background-image: url("src/postit/5.jpg");}
+    .mar2-5:hover{background-image: url("src/postit/11.jpg");}
+    .mar2-5:hover{background-image: url("src/postit/11.jpg");}
+    .mar2-8:hover{background-image: url("src/postit/apr3.jpg");}
+
+    .apr3-0:hover{background-image: url("src/postit/apr9.jpg");}
+    .apr3-3:hover{background-image: url("src/postit/apr8.jpg");}
+    .apr1-4:hover{background-image: url("src/postit/apr5.jpg");}
+    .apr2-2:hover{background-image: url("src/postit/apr6.jpg");}
+    .apr3-5:hover{background-image: url("src/postit/apr7.jpg");}
+    .apr3-8:hover{background-image: url("src/postit/a12.jpg");}
+    .apr3-7:hover{background-image: url("src/postit/a11.jpg");}
+    .apr1-2:hover{background-image: url("src/postit/a9.jpg");}
+    .apr2-3:hover{background-image: url("src/postit/a8.jpg");}
+    .apr1-0:hover{background-image: url("src/postit/a7.jpg");}
+    .apr1-1:hover{background-image: url("src/postit/a3.jpg");}
+    .apr1-7:hover{background-image: url("src/postit/a2.jpg");}
+    .apr2-5:hover{background-image: url("src/postit/a1.jpg");}
+    .apr1-8:hover{background-image: url("src/postit/a6.jpg");}
+    .apr3-6:hover{background-image: url("src/postit/apr2.jpg");}
+    .apr2-8:hover{background-image: url("src/postit/a10.jpg");}
+
+    .may3-0:hover{background-image: url("src/postit/may8.jpg");}
+    .may2-1:hover{background-image: url("src/postit/may7.jpg");}
+    .may2-3:hover{background-image: url("src/postit/may6.jpg");}
+    .may2-4:hover{background-image: url("src/postit/may5.jpg");}
+    .may2-5:hover{background-image: url("src/postit/may4.jpg");}
+    .may2-7:hover{background-image: url("src/postit/may3.jpg");}
+    .may2-8:hover{background-image: url("src/postit/may1.jpg");}
+    .may2-13:hover{background-image: url("src/postit/may1.jpg");}
+    .may2-16:hover{background-image: url("src/postit/may9.jpg");}
+    .may2-15:hover{background-image: url("src/postit/may10.jpg");}
+    .may2-17:hover{background-image: url("src/postit/may11.jpg");}
+
+    .jun2-0:hover{background-image: url("src/postit/june1.jpg");}
+    .jun3-2:hover{background-image: url("src/postit/june2.jpg");}
+    .jun2-5:hover{background-image: url("src/postit/june3.jpg");}
+    .jun2-7:hover{background-image: url("src/postit/june4.jpg");}
+    .jun1-9:hover{background-image: url("src/postit/june5.jpg");}
+    .jun3-7:hover{background-image: url("src/postit/june6.jpg");}
+
+    .jul2-2:hover{background-image: url("src/postit/jul1.jpg");}
+    .jul3-1:hover{background-image: url("src/postit/jul2.jpg");}
+    .jul2-5:hover{background-image: url("src/postit/jul3.jpg");}
+    .jul2-6:hover{background-image: url("src/postit/jul4.jpg");}
+    .jul2-17:hover{background-image: url("src/postit/jul5.jpg");}
+
+    .aug2-2:hover{background-image: url("src/postit/aug1.jpg");}
+    .aug3-5:hover{background-image: url("src/postit/aug2.jpg");}
+
+    .sep3-4:hover{background-image: url("src/postit/sep1.jpg");}
+    .sep2-5:hover{background-image: url("src/postit/sep2.jpg");}
+    
+    .sep2-5:hover{background-image: url("src/postit/sep2.jpg");}
+
+    .aug2-10:hover{background-image: url("src/postit/add/20.jpg");}
+    .dec3-4:hover{background-image: url("src/postit/add/21.jpg");}
+    .sep3-3:hover{background-image: url("src/postit/add/22.jpg");}
+    .sep3-5:hover{background-image: url("src/postit/add/23.jpg");}
+    .aug1-3:hover{background-image: url("src/postit/add/24.jpg");}
+    .aug1-4:hover{background-image: url("src/postit/add/25.jpg");}
+    .sep2-2:hover{background-image: url("src/postit/add/26.jpg");}
+    .jun2-8:hover{background-image: url("src/postit/add/28.jpg");}
+
+    .oct1-2:hover{background-image: url("src/postit/add/3.jpg");}
+    .oct1-3:hover{background-image: url("src/postit/add/4.jpg");}
+    .sep2-8:hover{background-image: url("src/postit/add/5.jpg");}
+    .oct1-0:hover{background-image: url("src/postit/add/6.jpg");}
+    .sep2-3:hover{background-image: url("src/postit/add/7.jpg");}
+    .nov1-3:hover{background-image: url("src/postit/add/8.jpg");}
+    .sep3-6:hover{background-image: url("src/postit/add/9.jpg");}
+    .aug1-9:hover{background-image: url("src/postit/add/10.jpg");}
+    .oct1-6:hover{background-image: url("src/postit/add/11.jpg");}
+    .nov3-0:hover{background-image: url("src/postit/add/12.jpg");}
+    .oct1-5:hover{background-image: url("src/postit/add/13.jpg");}
+    .may1-18:hover{background-image: url("src/postit/add/14.jpg");}
+    .may1-17:hover{background-image: url("src/postit/add/15.jpg");}
+    .nov1-6:hover{background-image: url("src/postit/add/16.jpg");}
+    .aug1-1:hover{background-image: url("src/postit/add/17.jpg");}
+    .aug1-2:hover{background-image: url("src/postit/add/18.jpg");}
+    .aug2-0:hover{background-image: url("src/postit/add/19.jpg");}
+    .may1-9:hover{background-image: url("src/postit/add/27.jpg");}
+    .apr1-6:hover{background-image: url("src/postit/add/29.jpg");}
+
+    /* APR */
+
+    .apr1-0{background-image: url("src/02apr/p1.jpg");}
+    .apr1-1{background-image: url("src/02apr/p2.jpg");}
+    .apr1-2{background-image: url("src/02apr/p3.jpg");}
+    .apr1-3{background-image: url("src/02apr/p4.jpg");}
+    .apr1-4{background-image: url("src/02apr/p5.jpg");}
+    .apr1-5{background-image: url("src/02apr/p6.jpg");}
+    .apr1-6{background-image: url("src/02apr/p7.jpg");}
+    .apr1-7{background-image: url("src/02apr/p8.jpg");}
+    .apr1-8{background-image: url("src/02apr/p9.jpg");}
+    .apr1-9{background-image: url("src/02apr/p10.jpg");}
+
+    .apr2-0{background-image: url("src/02apr/a1.jpg");}
+    .apr2-1{background-image: url("src/02apr/a2.jpg");}
+    .apr2-2{background-image: url("src/02apr/a3.jpg");}
+    .apr2-3{background-image: url("src/02apr/a4.jpg");}
+    .apr2-4{background-image: url("src/02apr/a5.jpg");}
+    .apr2-5{background-image: url("src/02apr/a6.jpg");}
+    .apr2-6{background-image: url("src/02apr/a7.jpg");}
+    .apr2-7{background-image: url("src/02apr/a8.jpg");}
+    .apr2-8{background-image: url("src/02apr/a9.jpg");}
+    .apr2-9{background-image: url("src/02apr/a10.jpg");}
+
+    .apr3-0{background-image: url("src/02apr/b1.jpg");}
+    .apr3-1{background-image: url("src/02apr/b2.jpg");}
+    .apr3-2{background-image: url("src/02apr/b3.jpg");}
+    .apr3-3{background-image: url("src/02apr/b4.jpg");}
+    .apr3-4{background-image: url("src/02apr/b5.jpg");}
+    .apr3-5{background-image: url("src/02apr/b6.jpg");}
+    .apr3-6{background-image: url("src/02apr/b7.jpg");}
+    .apr3-7{background-image: url("src/02apr/b8.jpg");}
+    .apr3-8{background-image: url("src/02apr/b9.jpg");}
+    .apr3-9{background-image: url("src/02apr/b10.jpg");}
+
+    /* MAY */
+
+    .may1-0{background-image: url("src/03may/p1.jpg");}
+    .may1-1{background-image: url("src/03may/p2.jpg");}
+    .may1-2{background-image: url("src/03may/p3.jpg");}
+    .may1-3{background-image: url("src/03may/p4.jpg");}
+    .may1-4{background-image: url("src/03may/p5.jpg");}
+    .may1-5{background-image: url("src/03may/p6.jpg");}
+    .may1-6{background-image: url("src/03may/p7.jpg");}
+    .may1-7{background-image: url("src/03may/p8.jpg");}
+    .may1-8{background-image: url("src/03may/p9.jpg");}
+    .may1-9{background-image: url("src/03may/p10.jpg");}
+    .may1-10{background-image: url("src/03may/p11.gif");}
+    .may1-11{background-image: url("src/03may/p12.jpg");}
+    .may1-12{background-image: url("src/03may/p13.jpg");}
+    .may1-13{background-image: url("src/03may/p14.jpg");}
+    .may1-14{background-image: url("src/03may/p15.gif");}
+    .may1-15{background-image: url("src/03may/p16.jpg");}
+    .may1-16{background-image: url("src/03may/p17.jpg");}
+    .may1-17{background-image: url("src/03may/p18.jpg");}
+    .may1-18{background-image: url("src/03may/p19.jpg");}
+
+    .may2-0{background-image: url("src/03may/a1.jpg");}
+    .may2-1{background-image: url("src/03may/a2.jpg");}
+    .may2-2{background-image: url("src/03may/a3.jpg");}
+    .may2-3{background-image: url("src/03may/a4.jpg");}
+    .may2-4{background-image: url("src/03may/a5.jpg");}
+    .may2-5{background-image: url("src/03may/a6.jpg");}
+    .may2-6{background-image: url("src/03may/a7.jpg");}
+    .may2-7{background-image: url("src/03may/a8.jpg");}
+    .may2-8{background-image: url("src/03may/a9.jpg");}
+    .may2-9{background-image: url("src/03may/a10.jpg");}
+    .may2-10{background-image: url("src/03may/a11.jpg");}
+    .may2-11{background-image: url("src/03may/a12.jpg");}
+    .may2-12{background-image: url("src/03may/a13.jpg");}
+    .may2-13{background-image: url("src/03may/a14.jpg");}
+    .may2-14{background-image: url("src/03may/a15.jpg");}
+    .may2-15{background-image: url("src/03may/a16.jpg");}
+    .may2-16{background-image: url("src/03may/a17.jpg");}
+    .may2-17{background-image: url("src/03may/a18.jpg");}
+    .may2-18{background-image: url("src/03may/a19.jpg");}
+
+    .may3-0{background-image: url("src/03may/b1.jpg");}
+    .may3-1{background-image: url("src/03may/b2.jpg");}
+    .may3-2{background-image: url("src/03may/b3.gif");}
+    .may3-3{background-image: url("src/03may/b4.jpg");}
+    .may3-4{background-image: url("src/03may/b5.jpg");}
+    .may3-5{background-image: url("src/03may/b6.jpg");}
+    .may3-6{background-image: url("src/03may/b7.gif");}
+    .may3-7{background-image: url("src/03may/b8.jpg");}
+    .may3-8{background-image: url("src/03may/b9.jpg");}
+    .may3-9{background-image: url("src/03may/b10.jpg");}
+    .may3-10{background-image: url("src/03may/b11.jpg");}
+    .may3-11{background-image: url("src/03may/b12.jpg");}
+    .may3-12{background-image: url("src/03may/b13.gif");}
+    .may3-13{background-image: url("src/03may/b14.gif");}
+    .may3-14{background-image: url("src/03may/b15.jpg");}
+    .may3-15{background-image: url("src/03may/b16.jpg");}
+    .may3-16{background-image: url("src/03may/b17.jpg");}
+    .may3-17{background-image: url("src/03may/b18.jpg");}
+    .may3-18{background-image: url("src/03may/b19.jpg");}
+    
+    /* JUN */
+
+    .jun1-0{background-image: url("src/04jun/p1.jpg");}
+    .jun1-1{background-image: url("src/04jun/p2.jpg");}
+    .jun1-2{background-image: url("src/04jun/p3.jpg");}
+    .jun1-3{background-image: url("src/04jun/p4.jpg");}
+    .jun1-4{background-image: url("src/04jun/p5.jpg");}
+    .jun1-5{background-image: url("src/04jun/p6.jpg");}
+    .jun1-6{background-image: url("src/04jun/p7.jpg");}
+    .jun1-7{background-image: url("src/04jun/p8.jpg");}
+    .jun1-8{background-image: url("src/04jun/p9.jpg");}
+    .jun1-9{background-image: url("src/04jun/p10.jpg");}
+
+    .jun2-0{background-image: url("src/04jun/a1.jpg");}
+    .jun2-1{background-image: url("src/04jun/a2.jpg");}
+    .jun2-2{background-image: url("src/04jun/a3.jpg");}
+    .jun2-3{background-image: url("src/04jun/a4.jpg");}
+    .jun2-4{background-image: url("src/04jun/a5.jpg");}
+    .jun2-5{background-image: url("src/04jun/a6.jpg");}
+    .jun2-6{background-image: url("src/04jun/a7.jpg");}
+    .jun2-7{background-image: url("src/04jun/a8.jpg");}
+    .jun2-8{background-image: url("src/04jun/a9.jpg");}
+    .jun2-9{background-image: url("src/04jun/a10.jpg");}
+
+    .jun3-0{background-image: url("src/04jun/b1.gif");}
+    .jun3-1{background-image: url("src/04jun/b2.jpg");}
+    .jun3-2{background-image: url("src/04jun/b3.jpg");}
+    .jun3-3{background-image: url("src/04jun/b4.jpg");}
+    .jun3-4{background-image: url("src/04jun/b5.jpg");}
+    .jun3-5{background-image: url("src/04jun/b6.gif");}
+    .jun3-6{background-image: url("src/04jun/b7.jpg");}
+    .jun3-7{background-image: url("src/04jun/b8.jpg");}
+    .jun3-8{background-image: url("src/04jun/b9.jpg");}
+    .jun3-9{background-image: url("src/04jun/b10.jpg");}
+
+    /* JUL */
+
+    .jul1-0{background-image: url("src/05jul/p1.jpg");}
+    .jul1-1{background-image: url("src/05jul/p2.jpg");}
+    .jul1-2{background-image: url("src/05jul/p3.jpg");}
+    .jul1-3{background-image: url("src/05jul/p4.jpg");}
+    .jul1-4{background-image: url("src/05jul/p5.jpg");}
+    .jul1-5{background-image: url("src/05jul/p6.jpg");}
+    .jul1-6{background-image: url("src/05jul/p7.jpg");}
+    .jul1-7{background-image: url("src/05jul/p8.jpg");}
+    .jul1-8{background-image: url("src/05jul/p9.jpg");}
+    .jul1-9{background-image: url("src/05jul/p10.jpg");}
+    .jul1-10{background-image: url("src/05jul/p11.jpg");}
+    .jul1-11{background-image: url("src/05jul/p12.jpg");}
+    .jul1-12{background-image: url("src/05jul/p13.jpg");}
+    .jul1-13{background-image: url("src/05jul/p14.jpg");}
+    .jul1-14{background-image: url("src/05jul/p15.jpg");}
+    .jul1-15{background-image: url("src/05jul/p16.jpg");}
+    .jul1-16{background-image: url("src/05jul/p17.jpg");}
+    .jul1-17{background-image: url("src/05jul/p18.jpg");}
+
+    .jul2-0{background-image: url("src/05jul/a1.jpg");}
+    .jul2-1{background-image: url("src/05jul/a2.jpg");}
+    .jul2-2{background-image: url("src/05jul/a3.jpg");}
+    .jul2-3{background-image: url("src/05jul/a4.jpg");}
+    .jul2-4{background-image: url("src/05jul/a5.jpg");}
+    .jul2-5{background-image: url("src/05jul/a6.jpg");}
+    .jul2-6{background-image: url("src/05jul/a7.jpg");}
+    .jul2-7{background-image: url("src/05jul/a8.jpg");}
+    .jul2-8{background-image: url("src/05jul/a9.jpg");}
+    .jul2-9{background-image: url("src/05jul/a10.jpg");}
+    .jul2-10{background-image: url("src/05jul/a11.jpg");}
+    .jul2-11{background-image: url("src/05jul/a12.jpg");}
+    .jul2-12{background-image: url("src/05jul/a13.jpg");}
+    .jul2-13{background-image: url("src/05jul/a14.jpg");}
+    .jul2-14{background-image: url("src/05jul/a15.jpg");}
+    .jul2-15{background-image: url("src/05jul/a16.jpg");}
+    .jul2-16{background-image: url("src/05jul/a17.jpg");}
+    .jul2-17{background-image: url("src/05jul/a18.jpg");}
+
+    .jul3-0{background-image: url("src/05jul/b1.jpg");}
+    .jul3-1{background-image: url("src/05jul/b2.jpg");}
+    .jul3-2{background-image: url("src/05jul/b3.jpg");}
+    .jul3-3{background-image: url("src/05jul/b4.jpg");}
+    .jul3-4{background-image: url("src/05jul/b5.jpg");}
+    .jul3-5{background-image: url("src/05jul/b6.jpg");}
+    .jul3-6{background-image: url("src/05jul/b7.jpg");}
+    .jul3-7{background-image: url("src/05jul/b8.jpg"); background-size: contain;}
+    .jul3-8{background-image: url("src/05jul/b9.jpg");}
+    .jul3-9{background-image: url("src/05jul/b10.jpg");}
+    .jul3-10{background-image: url("src/05jul/b11.jpg");}
+    .jul3-11{background-image: url("src/05jul/b12.jpg");}
+    .jul3-12{background-image: url("src/05jul/b13.jpg");}
+    .jul3-13{background-image: url("src/05jul/b14.jpg");}
+    .jul3-14{background-image: url("src/05jul/b15.jpg");}
+    .jul3-15{background-image: url("src/05jul/b16.jpg");}
+    .jul3-16{background-image: url("src/05jul/b17.jpg");}
+    .jul3-17{background-image: url("src/05jul/b18.jpg");}
+
+
+    /* AUG */
+
+    .aug1-0{background-image: url("src/06aug/p1.jpg");}
+    .aug1-1{background-image: url("src/06aug/p2.jpg");}
+    .aug1-2{background-image: url("src/06aug/p3.jpg");}
+    .aug1-3{background-image: url("src/06aug/p4.jpg");}
+    .aug1-4{background-image: url("src/06aug/p5.jpg");}
+    .aug1-5{background-image: url("src/06aug/p6.jpg");}
+    .aug1-6{background-image: url("src/06aug/p7.jpg");}
+    .aug1-7{background-image: url("src/06aug/p8.jpg");}
+    .aug1-8{background-image: url("src/06aug/p9.jpg");}
+    .aug1-9{background-image: url("src/06aug/p10.jpg");}
+    .aug1-10{background-image: url("src/06aug/p11.gif");}
+    .aug1-11{background-image: url("src/06aug/p12.jpg");}
+    .aug1-12{background-image: url("src/06aug/p13.jpg");}
+    .aug1-13{background-image: url("src/06aug/p14.jpg");}
+
+    .aug2-0{background-image: url("src/06aug/a1.jpg");}
+    .aug2-1{background-image: url("src/06aug/a2.jpg");}
+    .aug2-2{background-image: url("src/06aug/a3.jpg");}
+    .aug2-3{background-image: url("src/06aug/a4.jpg");}
+    .aug2-4{background-image: url("src/06aug/a5.jpg");}
+    .aug2-5{background-image: url("src/06aug/a6.jpg");}
+    .aug2-6{text-align: center;}
+    .aug2-7{background-image: url("src/06aug/a8.jpg");}
+    .aug2-8{background-image: url("src/06aug/a9.jpg");}
+    .aug2-9{background-image: url("src/06aug/a10.jpg");}
+    .aug2-10{background-image: url("src/06aug/a11.jpg");}
+    .aug2-11{background-image: url("src/06aug/a12.jpg");}
+    .aug2-12{background-image: url("src/06aug/a13.jpg");}
+    .aug2-13{background-image: url("src/06aug/a14.jpg");}
+
+    .aug3-0{background-image: url("src/06aug/b1.jpg");}
+    .aug3-1{background-image: url("src/06aug/b2.jpg");}
+    .aug3-2{background-image: url("src/06aug/b3.jpg");}
+    .aug3-3{background-image: url("src/06aug/b4.jpg");}
+    .aug3-4{background-image: url("src/06aug/b5.jpg");}
+    .aug3-5{background-image: url("src/06aug/b6.jpg");}
+    .aug3-6{background-image: url("src/06aug/b7.jpg");}
+    .aug3-7{background-image: url("src/06aug/b8.jpg");}
+    .aug3-8{background-image: url("src/06aug/b9.jpg");}
+    .aug3-9{background-image: url("src/06aug/b10.jpg");}
+    .aug3-10{background-image: url("src/06aug/b11.jpg");}
+    .aug3-11{background-image: url("src/06aug/b12.jpg");}
+    .aug3-12{background-image: url("src/06aug/b13.jpg");}
+    .aug3-13{background-image: url("src/06aug/b14.jpg");}
+
+
+    /* SEP */
+
+    .sep1-0{background-image: url("src/07sep/p1.jpg");}
+    .sep1-1{background-image: url("src/07sep/p2.jpg");}
+    .sep1-2{background-image: url("src/07sep/p3.jpg");}
+    .sep1-3{text-align: center;}
+    .sep1-4{background-image: url("src/07sep/p5.jpg");}
+    .sep1-5{background-image: url("src/07sep/p6.jpg");}
+    .sep1-6{background-image: url("src/07sep/p7.gif");}
+    .sep1-7{background-image: url("src/07sep/p8.gif");}
+    .sep1-8{background-image: url("src/07sep/p9.jpg");}
+    .sep1-9{background-image: url("src/07sep/p10.jpg");}
+
+    .sep2-0{background-image: url("src/07sep/a1.jpg");}
+    .sep2-1{background-image: url("src/07sep/a2.jpg");}
+    .sep2-2{background-image: url("src/07sep/a3.jpg");}
+    .sep2-3{background-image: url("src/07sep/a4.jpg");}
+    .sep2-4{text-align: center;}
+    .sep2-5{background-image: url("src/07sep/a6.jpg");}
+    .sep2-6{background-image: url("src/07sep/a7.gif");}
+    .sep2-7{background-image: url("src/07sep/a8.jpg");}
+    .sep2-8{background-image: url("src/07sep/a9.jpg");}
+    .sep2-9{background-image: url("src/07sep/a10.jpg");}
+
+    .sep3-0{background-image: url("src/07sep/b1.jpg");}
+    .sep3-1{background-image: url("src/07sep/b2.jpg");}
+    .sep3-2{background-image: url("src/07sep/b3.jpg");}
+    .sep3-3{background-image: url("src/07sep/b4.jpg");}
+    .sep3-4{background-image: url("src/07sep/b5.jpg");}
+    .sep3-5{background-image: url("src/07sep/b6.jpg");}
+    .sep3-6{background-image: url("src/07sep/b7.jpg");}
+    .sep3-7{background-image: url("src/07sep/b8.jpg");}
+    .sep3-8{background-image: url("src/07sep/b9.gif");}
+    .sep3-9{background-image: url("src/07sep/b10.jpg");}
+
+    /* OCT */
+
+    .oct1-0{background-image: url("src/08oct/p1.jpg");}
+    .oct1-1{background-image: url("src/08oct/p2.jpg");}
+    .oct1-2{background-image: url("src/08oct/p3.jpg");}
+    .oct1-3{background-image: url("src/08oct/p4.jpg");}
+    .oct1-4{background-image: url("src/08oct/p5.jpg");}
+    .oct1-5{background-image: url("src/08oct/p6.jpg");}
+    .oct1-6{background-image: url("src/08oct/p7.jpg");}
+    .oct1-7{background-image: url("src/08oct/p8.jpg");}
+
+    .oct2-0{background-image: url("src/08oct/a1.jpg");}
+    .oct2-1{background-image: url("src/08oct/a2.jpg");}
+    .oct2-2{background-image: url("src/08oct/a3.jpg");}
+    .oct2-3{background-image: url("src/08oct/a4.jpg");}
+    .oct2-4{background-image: url("src/08oct/a5.jpg");}
+    .oct2-5{background-image: url("src/08oct/a6.jpg");}
+    .oct2-6{background-image: url("src/08oct/a7.jpg");}
+    .oct2-7{background-image: url("src/08oct/a8.jpg");}
+
+    .oct3-0{background-image: url("src/08oct/b1.gif");}
+    .oct3-1{background-image: url("src/08oct/b2.jpg");}
+    .oct3-2{background-image: url("src/08oct/b3.jpg");}
+    .oct3-3{background-image: url("src/08oct/b4.jpg");}
+    .oct3-4{background-image: url("src/08oct/b5.gif");}
+    .oct3-5{background-image: url("src/08oct/b6.jpg");}
+    .oct3-6{background-image: url("src/08oct/b7.jpg");}
+    .oct3-7{background-image: url("src/08oct/b8.jpg");}
+
+    /* NOV */
+
+    .nov1-0{background-image: url("src/09nov/p1.jpg");}
+    .nov1-1{background-image: url("src/09nov/p2.jpg");}
+    .nov1-2{background-image: url("src/09nov/p3.jpg");}
+    .nov1-3{background-image: url("src/09nov/p4.jpg");}
+    .nov1-4{background-image: url("src/09nov/p5.jpg");}
+    .nov1-5{background-image: url("src/09nov/p6.jpg");}
+    .nov1-6{background-image: url("src/09nov/p7.jpg");}
+
+    .nov2-0{background-image: url("src/09nov/a1.jpg");}
+    .nov2-1{background-image: url("src/09nov/a2.jpg");}
+    .nov2-2{background-image: url("src/09nov/a3.jpg");}
+    .nov2-3{background-image: url("src/09nov/a4.jpg");}
+    .nov2-4{background-image: url("src/09nov/a5.jpg");}
+    .nov2-5{background-image: url("src/09nov/a6.jpg");}
+    .nov2-6{background-image: url("src/09nov/a7.jpg");}
+
+    .nov3-0{background-image: url("src/09nov/b1.jpg");}
+    .nov3-1{background-image: url("src/09nov/b2.jpg");}
+    .nov3-2{background-image: url("src/09nov/b3.jpg");}
+    .nov3-3{background-image: url("src/09nov/b4.jpg");}
+    .nov3-4{background-image: url("src/09nov/b5.jpg");}
+    .nov3-5{background-image: url("src/09nov/b6.jpg");}
+    .nov3-6{background-image: url("src/09nov/b7.gif");}
+
+    /* DEC */
+
+    .dec1-0{background-image: url("src/10dec/p1.jpg");}
+    .dec1-1{background-image: url("src/10dec/p2.gif");}
+    .dec1-2{background-image: url("src/10dec/p3.jpg");}
+    .dec1-3{background-image: url("src/10dec/p4.gif");}
+    .dec1-4{background-image: url("src/10dec/p5.jpg");}
+    .dec1-5{background-image: url("src/10dec/p6.jpg");}
+
+    .dec2-0{text-align: center;}
+    .dec2-1{background-image: url("src/10dec/a2.jpg");}
+    .dec2-2{background-image: url("src/10dec/a3.jpg");}
+    .dec2-3{background-image: url("src/10dec/a4.jpg");}
+    .dec2-4{background-image: url("src/10dec/a5.jpg");}
+    .dec2-5{background-image: url("src/10dec/a6.jpg");}
+
+    .dec3-0{background-image: url("src/10dec/b1.jpg");}
+    .dec3-1{background-image: url("src/10dec/b2.jpg");}
+    .dec3-2{background-image: url("src/10dec/b3.jpg");}
+    .dec3-3{background-image: url("src/10dec/b4.jpg");}
+    .dec3-4{background-image: url("src/10dec/b5.jpg");}
+    .dec3-5{background-image: url("src/10dec/b6.jpg");}
+
+/* 추가 */
+    .dec1-6{background-image: url("src/추가/a1.jpeg");}
+    .dec1-7{background-image: url("src/추가/a2.jpeg");}
+    .dec1-8{background-image: url("src/추가/a3.jpeg");}
+    .dec1-9{background-image: url("src/추가/a4.jpeg");}
+    .dec1-10{background-image: url("src/추가/a5.jpeg");}
+    .dec1-11{background-image: url("src/추가/a6.jpeg");}
+    .dec1-12{background-image: url("src/추가/a7.jpeg");}
+    .dec1-13{background-image: url("src/추가/a8.jpeg");}
+
+    .dec2-6{background-image: url("src/추가/a9.jpeg");}
+    .dec2-7{background-image: url("src/추가/a10.jpeg");}
+    .dec2-8{background-image: url("src/추가/a11.jpeg");}
+    .dec2-9{background-image: url("src/추가/a12.jpeg");}
+    .dec2-10{background-image: url("src/추가/a13.jpeg");}
+    .dec2-11{background-image: url("src/추가/a14.jpeg");}
+    .dec2-12{background-image: url("src/추가/a15.jpeg");}
+    .dec2-13{background-image: url("src/추가/a16.jpeg");}
+
+    .dec3-6{background-image: url("src/추가/a17.jpeg");}
+    .dec3-7{background-image: url("src/추가/a18.jpeg");}
+    .dec3-8{background-image: url("src/추가/a19.jpeg");}
+    .dec3-9{background-image: url("src/추가/a20.jpeg");}
+    .dec3-10{background-image: url("src/추가/a21.jpeg");}
+    .dec3-11{background-image: url("src/추가/a22.jpeg");}
+    .dec3-12{background-image: url("src/추가/a23.jpeg");}
+    .dec3-13{background-image: url("src/추가/a24.jpeg");}
+
+/* NEW */
+    /* .new1{background-image: url("src/new1.gif");} */
+    .new2{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .new2 img{
+        /* margin-top: 100px; */
+        vertical-align: middle;
+        }
+
+    .new3{background-image: url("src/new3.jpg");}
+
+
+    audio{
+        position: fixed;
+        left: 11vw;
+    }
+
+    .lyrics p{
+        font-size: 6px;
+        color:lightblue;
+    }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="leftnavi">
+            <a href="#insaption"><h3>insaption</h3></a> <!-- <h3 id=may">insaption</h3> -->
+            <p>yujin's <br>[inception] of <br>internship @ sap</p>
+            
+            <ul class="navigation" id="navigation">
+                <li><a href="#mar">mar</a></li>
+                <li><a href="#apr">apr</a></li>
+                <li><a href="#may">may</a></li>
+                <li><a href="#jun">jun</a></li>
+                <li><a href="#jul">jul</a></li>
+                <li><a href="#aug">aug</a></li>
+                <li><a href="#sep">sep</a></li>
+                <li><a href="#oct">oct</a></li>
+                <li><a href="#nov">nov</a></li>
+                <li><a href="#dec">dec</a></li>
+                <br><br>
+                <li><a href="thankyou.html">thank you</a></li>
+                <br>
+                <audio src="src/again_leesangsoon.mp3" style="width:10vw" controls></audio>
+            </ul>
+            <br><br><br>
+            <div class="lyrics"><p>♪ 따뜻한 내가 되면 돌아올지 모르니 그 곳의 문을 닫지 말아줘</p></div>
+        </div>
+        <div class="comments">
+            <p>
+                <div id="disqus_thread"></div>
+            <script>
+            
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://insaption.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                        
+            </p>
+        </div>
+    
+        <div class="boxes">
+            <div class="boxes1">
+                <div class="bg1-0" id="insaption"></div>
+                <div class="bg1-1"></div>
+
+                <div class="new1"></div>
+
+                <div class="mar1-0" id="mar"></div>
+                <div class="mar1-1"></div>
+                <div class="mar1-2"></div>
+                <div class="mar1-3"></div>
+                <div class="mar1-4"></div>
+                <div class="mar1-5"></div>
+                <div class="mar1-6"></div>
+                <div class="mar1-7"></div>
+                <div class="mar1-8"></div>
+                <div class="mar1-9"></div>
+
+                <div class="apr1-0" id="apr"></div>
+                <div class="apr1-1"></div>
+                <div class="apr1-2"></div>
+                <div class="apr1-3"><iframe src="https://www.youtube.com/embed/9_xCTf3Vzf8" width="100%" height="100%" controls></iframe></div>
+                <div class="apr1-4"></div>
+                <div class="apr1-5"></div>
+                <div class="apr1-6"></div>
+                <div class="apr1-7"></div>
+                <div class="apr1-8"></div>
+                <div class="apr1-9"></div>
+
+                <div class="may1-0" id="may"></div>
+                <div class="may1-1"></div>
+                <div class="may1-2"></div>
+                <div class="may1-3"></div>
+                <div class="may1-4"></div>                
+                <div class="may1-5"></div>
+                <div class="may1-6"></div>
+                <div class="may1-7"></div>
+                <div class="may1-8"></div>
+                <div class="may1-9"></div>
+                <div class="may1-10"></div>
+                <div class="may1-11"></div>
+                <div class="may1-12"></div>
+                <div class="may1-13"></div>
+                <div class="may1-14"></div>
+                <div class="may1-15"></div>
+                <div class="may1-16"></div>
+                <div class="may1-17"></div>
+                <div class="may1-18"></div>
+
+                <div class="jun1-0" id="jun"></div>
+                <div class="jun1-1"></div>
+                <div class="jun1-2"></div>
+                <div class="jun1-3"></div>
+                <div class="jun1-4"></div>
+                <div class="jun1-5"></div>
+                <div class="jun1-6"></div>
+                <div class="jun1-7"></div>
+                <div class="jun1-8"></div>
+                <div class="jun1-9"></div>
+
+                <div class="jul1-0" id="jul"></div>
+                <div class="jul1-1"></div>
+                <div class="jul1-2"></div>
+                <div class="jul1-3"></div>
+                <div class="jul1-4"></div>                
+                <div class="jul1-5"></div>
+                <div class="jul1-6"></div>
+                <div class="jul1-7"></div>
+                <div class="jul1-8"></div>
+                <div class="jul1-9"></div>
+                <div class="jul1-10"></div>
+                <div class="jul1-11"></div>
+                <div class="jul1-12"></div>
+                <div class="jul1-13"></div>
+                <div class="jul1-14"></div>
+                <div class="jul1-15"></div>
+                <div class="jul1-16"></div>
+                <div class="jul1-17"></div>
+
+                <div class="aug1-0" id="aug"></div>
+                <div class="aug1-1"></div>
+                <div class="aug1-2"></div>
+                <div class="aug1-3"></div>
+                <div class="aug1-4"></div>                
+                <div class="aug1-5"></div>
+                <div class="aug1-6"></div>
+                <div class="aug1-7"></div>
+                <div class="aug1-8"></div>
+                <div class="aug1-9"></div>
+                <div class="aug1-10"></div>
+                <div class="aug1-11"></div>
+                <div class="aug1-12"></div>
+                <div class="aug1-13"></div>             
+                
+                <div class="sep1-0" id="sep"></div>
+                <div class="sep1-1"></div>
+                <div class="sep1-2"></div>
+                <div class="sep1-3"><img src="src/07sep/p4.jpg" width="100%"></div>
+                <div class="sep1-4"></div>
+                <div class="sep1-5"></div>
+                <div class="sep1-6"></div>
+                <div class="sep1-7"></div>
+                <div class="sep1-8"></div>
+                <div class="sep1-9"></div>
+
+                <div class="oct1-0" id="oct"></div>
+                <div class="oct1-1"></div>
+                <div class="oct1-2"></div>
+                <div class="oct1-3"></div>
+                <div class="oct1-4"></div>
+                <div class="oct1-5"></div>
+                <div class="oct1-6"></div>
+
+                <div class="nov1-0" id="nov"></div>
+                <div class="nov1-1"></div>
+                <div class="nov1-2"></div>
+                <div class="nov1-3"></div>
+                <div class="nov1-4"></div>
+                <div class="nov1-5"></div>
+                <div class="nov1-6"></div>
+
+                <div class="dec1-0" id="dec"><iframe src="https://www.youtube.com/embed/6AnrW7PQKME" width="100%" height="100%" controls></iframe></div>
+                <div class="dec1-1"></div>
+                <div class="dec1-2"></div>
+                <div class="dec1-3"></div>
+                <div class="dec1-4"></div>
+                <div class="dec1-5"></div>
+
+                <div class="dec1-6"></div>
+                <div class="dec1-7"></div>
+                <div class="dec1-8"></div>
+                <div class="dec1-9"></div>
+                <div class="dec1-10"></div>
+                <div class="dec1-11"></div>
+                <div class="dec1-12"></div>
+                <div class="dec1-13"></div>
+
+            </div>
+
+            <div class="boxes2">
+                <div class="bg2-0"></div>
+                <div class="bg2-1"></div>
+
+                <div class="new2"><img src="src/new1.gif" width="70%" alt=""></div>
+
+
+                <div class="mar2-0" id="mar"></div>
+                <div class="mar2-1"></div>
+                <div class="mar2-2"></div>
+                <div class="mar2-3"></div>
+                <div class="mar2-4"></div>
+                <div class="mar2-5" id="dec"></div>
+                <div class="mar2-6"></div>
+                <div class="mar2-7"></div>
+                <div class="mar2-8"></div>
+                <div class="mar2-9"></div>
+
+                <div class="apr2-0" id="apr"><iframe src="https://www.youtube.com/embed/1sycy5s8NTo" width="100%" height="100%" controls></iframe></div>
+                <div class="apr2-1"><iframe src="https://www.youtube.com/embed/ctDHdumYgWc" width="100%" height="100%" controls></iframe></div>
+                <div class="apr2-2"></div>
+                <div class="apr2-3"></div>
+                <div class="apr2-4"></div>
+                <div class="apr2-5"></div>
+                <div class="apr2-6"></div>
+                <div class="apr2-7"></div>
+                <div class="apr2-8"></div>
+                <div class="apr2-9"></div>
+
+                <div class="may2-0" id="may"></div>
+                <div class="may2-1"></div>
+                <div class="may2-2"></div>
+                <div class="may2-3"></div>
+                <div class="may2-4"></div>                
+                <div class="may2-5"></div>
+                <div class="may2-6"></div>
+                <div class="may2-7"></div>
+                <div class="may2-8"></div>
+                <div class="may2-9"></div>
+                <div class="may2-10"></div>
+                <div class="may2-11"></div>
+                <div class="may2-12"></div>
+                <div class="may2-13"></div>
+                <div class="may2-14"></div>
+                <div class="may2-15"></div>
+                <div class="may2-16"></div>
+                <div class="may2-17"></div>
+                <div class="may2-18"></div>
+
+                <div class="jun2-0" id="jun"></div>
+                <div class="jun2-1"></div>
+                <div class="jun2-2"></div>
+                <div class="jun2-3"></div>
+                <div class="jun2-4"></div>
+                <div class="jun2-5"></div>
+                <div class="jun2-6"></div>
+                <div class="jun2-7"></div>
+                <div class="jun2-8"></div>
+                <div class="jun2-9"></div>
+
+                <div class="jul2-0" id="jul"></div>
+                <div class="jul2-1"></div>
+                <div class="jul2-2"></div>
+                <div class="jul2-3"></div>
+                <div class="jul2-4"></div>                
+                <div class="jul2-5"></div>
+                <div class="jul2-6"></div>
+                <div class="jul2-7"></div>
+                <div class="jul2-8"></div>
+                <div class="jul2-9"></div>
+                <div class="jul2-10"></div>
+                <div class="jul2-11"></div>
+                <div class="jul2-12"></div>
+                <div class="jul2-13"></div>
+                <div class="jul2-14"></div>
+                <div class="jul2-15"></div>
+                <div class="jul2-16"></div>
+                <div class="jul2-17"></div>
+
+                <div class="aug2-0"></div>
+                <div class="aug2-1"></div>
+                <div class="aug2-2"></div>
+                <div class="aug2-3"></div>
+                <div class="aug2-4"></div>                
+                <div class="aug2-5"></div>
+                <div class="aug2-6"><img src="src/06aug/a7.jpg" width=100%></div>
+                <div class="aug2-7"></div>
+                <div class="aug2-8"></div>
+                <div class="aug2-9"></div>
+                <div class="aug2-10"></div>
+                <div class="aug2-11"></div>
+                <div class="aug2-12"></div>
+                <div class="aug2-13"></div>             
+                
+                <div class="sep2-0" id="sep"></div>
+                <div class="sep2-1"></div>
+                <div class="sep2-2"></div>
+                <div class="sep2-3"></div>
+                <div class="sep2-4"><img src="src/07sep/a5.jpg" width="100%"></div>
+                <div class="sep2-5"></div>
+                <div class="sep2-6"></div>
+                <div class="sep2-7"></div>
+                <div class="sep2-8"></div>
+                <div class="sep2-9"></div>
+
+                <div class="oct2-0" id="oct"></div>
+                <div class="oct2-1"></div>
+                <div class="oct2-2"><iframe src="https://www.youtube.com/embed/7JNIUqavNzM" width="100%" height="100%" controls></iframe></div>
+                <div class="oct2-3"><iframe src="https://www.youtube.com/embed/GF6GAeXCXIs" width="100%" height="100%" controls></iframe></div>
+                <div class="oct2-4"></div>
+                <div class="oct2-5"></div>
+                <div class="oct2-6"></div>
+
+                <div class="nov2-0" id="nov"></div>
+                <div class="nov2-1"><iframe src="https://www.youtube.com/embed/tHzJJg48cnU" width="100%" height="100%" controls></iframe></div>
+                <div class="nov2-2"><iframe src="https://www.youtube.com/embed/kuUy-Azvxq8" width="100%" height="100%" controls></iframe></div>
+                <div class="nov2-3"></div>
+                <div class="nov2-4"></div>
+                <div class="nov2-5"></div>
+                <div class="nov2-6"></div>
+
+                <div class="dec2-0" id="dec"><img src="src/10dec/a1.jpg" width="100%"></div>
+                <div class="dec2-1"></div>
+                <div class="dec2-2"></div>
+                <div class="dec2-3"></div>
+                <div class="dec2-4"></div>
+                <div class="dec2-5"></div>
+
+                <div class="dec2-6"></div>
+                <div class="dec2-7"></div>
+                <div class="dec2-8"></div>
+                <div class="dec2-9"></div>
+                <div class="dec2-10"></div>
+                <div class="dec2-11"></div>
+                <div class="dec2-12"></div>
+                <div class="dec2-13"></div>
+            </div>
+
+            <div class="boxes3">
+                <div class="bg3-0"></div>
+                <div class="bg3-1"></div>
+
+                <div class="new3"></div>
+
+
+                <div class="mar3-0" id="mar"></div>
+                <div class="mar3-1"></div>
+                <div class="mar3-2"></div>
+                <div class="mar3-3"><iframe src="https://www.youtube.com/embed/rMd-ojMovO0" width="100%" height="100%" controls></iframe></div>
+                <div class="mar3-4"><iframe src="https://www.youtube.com/embed/b24b-85DX5c" width="100%" height="100%" controls></iframe></div>
+                <div class="mar3-5"></div>
+                <div class="mar3-6"></div>
+                <div class="mar3-7"></div>
+                <div class="mar3-8"></div>
+                <div class="mar3-9"></div>
+
+                <div class="apr3-0" id="apr"></div>
+                <div class="apr3-1"><iframe src="https://www.youtube.com/embed/quWVLfsyacE" width="100%" height="100%" controls></iframe></div>
+                <div class="apr3-2"><iframe src="https://www.youtube.com/embed/Rv97wA5JL9I" width="100%" height="100%" controls></iframe></div>
+                <div class="apr3-3"></div>
+                <div class="apr3-4"></div>
+                <div class="apr3-5"></div>
+                <div class="apr3-6"></div>
+                <div class="apr3-7"></div>
+                <div class="apr3-8"></div>
+                <div class="apr3-9"></div>
+
+                <div class="may3-0" id="may"></div>
+                <div class="may3-1"></div>
+                <div class="may3-2"></div>
+                <div class="may3-3"></div>
+                <div class="may3-4"></div>                
+                <div class="may3-5"></div>
+                <div class="may3-6"></div>
+                <div class="may3-7"><iframe src="https://www.youtube.com/embed/Rq8JMBtd6XQ" width="100%" height="100%" controls></iframe></div>
+                <div class="may3-8"><iframe src="https://www.youtube.com/embed/XJx4ATzO2pA" width="100%" height="100%" controls></iframe></div>
+                <div class="may3-9"></div>
+                <div class="may3-10"><iframe src="https://www.youtube.com/embed/nU1JQRY-Ez0" width="100%" height="100%" controls></iframe></div>
+                <div class="may3-11"><iframe src="https://www.youtube.com/embed/Zpl9tdf3YsY" width="100%" height="100%" controls></iframe></div>
+                <div class="may3-12"></div>
+                <div class="may3-13"></div>
+                <div class="may3-14"></div>
+                <div class="may3-15"></div>
+                <div class="may3-16"></div>
+                <div class="may3-17"></div>
+                <div class="may3-18"></div>
+
+                <div class="jun3-0" id="jun"></div>
+                <div class="jun3-1"></div>
+                <div class="jun3-2"></div>
+                <div class="jun3-3"></div>
+                <div class="jun3-4"></div>
+                <div class="jun3-5"></div>
+                <div class="jun3-6"></div>
+                <div class="jun3-7"></div>
+                <div class="jun3-8"></div>
+                <div class="jun3-9"><iframe src="https://www.youtube.com/embed/WDrbrM1WP4U" width="100%" height="100%" controls></iframe></div>
+
+                <div class="jul3-0" id="jul"></div>
+                <div class="jul3-1"></div>
+                <div class="jul3-2"></div>
+                <div class="jul3-3"></div>
+                <div class="jul3-4"><iframe src="https://www.youtube.com/embed/tqcmlNgqpzA" width="100%" height="100%" controls></iframe></div>                
+                <div class="jul3-5"></div>
+                <div class="jul3-6"></div>
+                <div class="jul3-7"></div>
+                <div class="jul3-8"></div>
+                <div class="jul3-9"></div>
+                <div class="jul3-10"></div>
+                <div class="jul3-11"><iframe src="https://www.youtube.com/embed/TxPBI-oL7zY" width="100%" height="100%" controls></iframe></div>
+                <div class="jul3-12"></div>
+                <div class="jul3-13"></div>
+                <div class="jul3-14"><iframe src="https://www.youtube.com/embed/HfPOLAD8RaU" width="100%" height="100%" controls></iframe></div>
+                <div class="jul3-15"></div>
+                <div class="jul3-16"></div>
+                <div class="jul3-17"></div>
+
+                <div class="aug3-0"></div>
+                <div class="aug3-1"></div>
+                <div class="aug3-2"></div>
+                <div class="aug3-3"></div>
+                <div class="aug3-4"></div>                
+                <div class="aug3-5"></div>
+                <div class="aug3-6"></div>
+                <div class="aug3-7"></div>
+                <div class="aug3-8"></div>
+                <div class="aug3-9"><iframe src="https://www.youtube.com/embed/zFVaPkDdV7o" width="100%" height="100%" controls></iframe></div>
+                <div class="aug3-10"></div>
+                <div class="aug3-11"></div>
+                <div class="aug3-12"></div>
+                <div class="aug3-13"></div>             
+                
+                <div class="sep3-0" id="sep"></div>
+                <div class="sep3-1"></div>
+                <div class="sep3-2"></div>
+                <div class="sep3-3"></div>
+                <div class="sep3-4"></div>
+                <div class="sep3-5"></div>
+                <div class="sep3-6"></div>
+                <div class="sep3-7"></div>
+                <div class="sep3-8"></div>
+                <div class="sep3-9"></div>
+
+                <div class="oct3-0" id="oct"></div>
+                <div class="oct3-1"><iframe src="https://www.youtube.com/embed/2XqFpiYtWPk" width="100%" height="100%" controls></iframe></div>
+                <div class="oct3-2"></div>
+                <div class="oct3-3"></div>
+                <div class="oct3-4"></div>
+                <div class="oct3-5"><iframe src="https://www.youtube.com/embed/Vy77Zq6ZHNk" width="100%" height="100%" controls></iframe></div>
+                <div class="oct3-6"><iframe src="https://www.youtube.com/embed/wGHzYHLbq1E" width="100%" height="100%" controls></iframe></div>
+    
+                <div class="nov3-0" id="nov"></div>
+                <div class="nov3-1"></div>
+                <div class="nov3-2"></div>
+                <div class="nov3-3"></div>
+                <div class="nov3-4"></div>
+                <div class="nov3-5"></div>
+                <div class="nov3-6"></div>
+
+                <div class="dec3-0" id="dec"></div>
+                <div class="dec3-1"></div>
+                <div class="dec3-2"></div>
+                <div class="dec3-3"></div>
+                <div class="dec3-4"></div>
+                <div class="dec3-5"></div>
+
+                <div class="dec3-6"></div>
+                <div class="dec3-7"></div>
+                <div class="dec3-8"></div>
+                <div class="dec3-9"></div>
+                <div class="dec3-10"></div>
+                <div class="dec3-11"></div>
+                <div class="dec3-12"></div>
+                <div class="dec3-13"></div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    
+
+
+
+</body>
+</html>

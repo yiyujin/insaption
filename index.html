@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        body{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            /* center, transform 하면 요소의 기준점*이 center가됨, 에펙의 y라고 보면 될듯*/
+        }
+
+        .title{
+            text-decoration: underline;
+            font-size: 25px;
+            display: inline;
+        }
+
+        h3{
+            color:#3D3D3D;
+            font-family:"futura";
+            display:inline;
+            padding:5px;
+        }
+
+
+        p{
+            color:gray;
+            font-family:  "Apple SD Gothic Neo";
+            display: inline;
+            
+    
+        }
+
+        .password{
+            text-align: center;
+        }
+
+        input::placeholder{
+            font-size: 80%;
+        }
+
+    </style>
+
+
+    <script>
+        function enterKey(){
+            if(event.keyCode==13) 
+            {
+                checkPassword();
+            }
+        }
+
+        function checkPassword(){
+            var password=document.getElementById("passwordBox");
+            var passwordText=password.value;
+
+            if(passwordText=="190318"){
+                window.open("insaption.html","_self")
+                return true;
+            }
+            alert("놉");
+            return false;
+        }
+
+        var i = 0;
+        var txt = "[inception] of internship @ sap";
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("abcd").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+    <div class="title">
+    <h3>in</h3><h3>sap</h3><h3>tion</h3>
+    </div>
+    
+    <button onclick="typeWriter()">?</button>
+    <p id="abcd"></p>
+
+    <input id="passwordBox" type="text" maxlength='6' placeholder="yujin's first day/yymmdd" onkeydown="enterKey()">
+
+    <!-- <a href="insaption.html" onclick="return checkPassword();"> enter </a> -->
+</body>
+</html>
